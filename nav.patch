@@ -1,0 +1,35 @@
+--- rc_test2/site/src/_nav.js	2018-09-27 13:24:59.420948623 -0500
++++ rc_test/site/src/_nav.js	2018-09-27 10:10:02.644515582 -0500
+@@ -37,6 +37,32 @@
+       },
+     },
+     {
++      name: 'Datatables',
++      icon: 'fa fa-tasks',
++      children: [
++        {
++          name: 'Description',
++          icon: 'icon-info',
++          url: '/datatables/description',
++        },
++        {
++          name: 'Plain Old Datatables',
++          icon: 'fa fa-table',
++          url: '/datatables/basic'
++        },
++        {
++          name: 'AJAX Datatables (MSSQL)',
++          icon: 'fa fa-th-list',
++          url: '/datatables/ajax-mssql'
++        },
++        {
++          name: 'AJAX Datatables (Oracle)',
++          icon: 'fa fa-th-list',
++          url: '/datatables/ajax-oracle'
++        }
++      ]
++    },
++    {
+       name: 'Base',
+       url: '/base',
+       icon: 'icon-puzzle',

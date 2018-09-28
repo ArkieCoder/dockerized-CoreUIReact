@@ -1,0 +1,8 @@
+#!/bin/bash -x
+
+if [ -r "OFF" ]
+then
+  sleep infinity
+else
+  cd site && npm start
+fi

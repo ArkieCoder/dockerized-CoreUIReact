@@ -1,0 +1,4 @@
+#!/bin/bash -x
+cd site
+npm install
+npm install datatables.net jquery

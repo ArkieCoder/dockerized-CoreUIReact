@@ -1,0 +1,6 @@
+#!/bin/bash -x
+
+./set_env
+docker-compose exec web npx "$@"
+rm -f .env
+

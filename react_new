@@ -1,0 +1,17 @@
+#!/bin/bash -x
+
+./build
+./up -d
+./set_env
+docker-compose exec web git clone https://github.com/coreui/coreui-free-react-admin-template.git site
+docker-compose exec web /home/node/app/init_npm
+rm -f .env
+./down
+rm -f OFF
+mkdir -p site/src/components
+mv -v components/Datatable site/src/components
+mv -v views/Datatables site/src/views
+rmdir components
+rmdir views
+patch -p1 < routes.patch
+patch -p1 < nav.patch
